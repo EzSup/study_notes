@@ -1,3 +1,4 @@
+[SSH](https://www.cloudflare.com/learning/access-management/what-is-ssh/)
 ## 1. Концепція та Термінологія 💡
 
 | Термін                             | Значення                                                             | Примітка                                                                    |
