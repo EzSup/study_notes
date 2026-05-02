@@ -1,3 +1,5 @@
+# Middlewares
+
 `IEndpointRouteBuilder`
 
 ``` C#
@@ -36,3 +38,12 @@ public static class RequestLoggingMiddlewareExtensions
     }
 }
 ```
+
+## Див. також
+- [[Filters]]
+- [[Design patterns]]
+- [[Di .net applications]]
+- [[Backgorund service and hosted service]]
+
+---
+#dotnet #csharp #aspnet #middlewares #pipeline

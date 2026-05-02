@@ -1,3 +1,5 @@
+# Filters
+
 Фільтри – це компоненти, які дозволяють виконувати код _до або після_ певних етапів виконання дії (action) в контролері.
 Щоб оголосити фільтр, потрібно створити клас, успадкований від [[Attributes]] і реалізуючий один із інтерфейсів фільтрів.
 Залежно від деяких умов фільтрів, є різні інтерфейси, але головний це `IActionFilter`.
@@ -86,3 +88,12 @@ EXECUTEDDDDD /mymy/myaction in 7 ms
 9. `IResourceFilter.OnResourceExecuted`
 10. `IExceptionFilter` (виконується тільки у випадку необробленого винятку)
 
+
+
+## Див. також
+- [[Middlewares]]
+- [[Design patterns]]
+- [[Di .net applications]]
+
+---
+#dotnet #csharp #aspnet #filters #pipeline

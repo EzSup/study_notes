@@ -1,3 +1,5 @@
+# Streams
+
 >Stream is the abstract base class of all streams. A stream is an abstraction of a sequence of bytes, such as a file, an input/output device, an inter-process communication pipe, or a TCP/IP socket. The Stream class and its derived classes provide a generic view of these different types of input and output, and isolate the programmer from the specific details of the operating system and the underlying devices.
 
 **Stream**(стрім або потік) це просто рівень абстракції, який дає можливість чиатти/записувати потоки байтів з/e файл, різні девайси, черхи та TCP/IP сокети 
@@ -114,3 +116,10 @@ StreamWriter provides the following methods:
 - **WriteLine**/**WriteLineAsync** to write a line to stream.
 
 Both **StreamReader** and **StreamWriter** are **disposable** resources.
+
+## Див. також
+- [[Stack, heap, GC]]
+- [[CLR]]
+
+---
+#dotnet #csharp #streams #io

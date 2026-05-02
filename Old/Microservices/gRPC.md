@@ -1,3 +1,5 @@
+# gRPC
+
 gRPC (Google Remote Procedure Call) - фреймворк, побудований поверх HTTP/2.0, який використовує протобаф для опису сервісів.
 Патерни взаємодії в gRPC:
 1. Server to client streaming (клієнт робить один запит і отримує багато пакетів у відповідь від сервера)
@@ -8,3 +10,12 @@ gRPC (Google Remote Procedure Call) - фреймворк, побудований
 Формати серіалізації в gRPC:
 1. [[Protobuff]]
 2. JSON
+
+
+## Див. також
+- [[RabbitMQ]]
+- [[Microservice Architecture]]
+- [[Docker]]
+
+---
+#grpc #microservices #http2 #api

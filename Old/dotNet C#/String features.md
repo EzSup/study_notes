@@ -1,3 +1,5 @@
+# String Features
+
 
 int number = 42;
 string formatted = number.ToString("D5"); // "00042"
@@ -86,3 +88,9 @@ csharp
 Копіювати код
 
 `int hours = 7; int minutes = 5;  string time = $"{hours:D2}:{minutes:D2}"; Console.WriteLine($"Зараз час: {time}"); // "Зараз час: 07:05"`
+
+## Див. також
+- [[CLR]]
+
+---
+#dotnet #csharp #strings #formatting

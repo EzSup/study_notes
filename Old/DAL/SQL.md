@@ -1,3 +1,4 @@
+# SQL
 
 Users
 
@@ -68,4 +69,17 @@ SET Title = 'Updated Title' WHERE Id = 2;
 
 **Indexes** до 900 б
 
-b-tree індекс 
+b-tree індекс
+
+## Див. також
+- [[PostgreSQL Queries]]
+- [[PostgreSQL Data Types]]
+- [[Індекси]]
+- [[Транзакції]]
+- [[Stored procedures]]
+- [[SQL Query Optimization]]
+- [[NoSQL]]
+- [[EF Core additional]]
+
+---
+#sql #database #dal

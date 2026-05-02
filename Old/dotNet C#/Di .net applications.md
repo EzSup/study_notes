@@ -1,3 +1,5 @@
+# Dependency Injection in .NET
+
 **Dependency Injection (DI)** — це патерн проєктування, який полягає у передаванні залежностей об'єкта ззовні, а не створенні їх усередині класу. Це дозволяє зменшити зв'язність компонентів, полегшити тестування та сприяє кращій розширюваності коду.
 
 ### **Який принцип реалізує DI?**
@@ -134,3 +136,13 @@ csharp
 - **У ASP.NET Core та Worker Service DI вбудований та працює через `HostBuilder`.**
 - **У консольних, WPF і MAUI-додатках DI можна налаштувати вручну через `ServiceCollection`.**
 - **Життєвий цикл сервісів (Scoped, Singleton, Transient) залежить від типу додатку.**
+
+## Див. також
+- [[Design patterns]]
+- [[Middlewares]]
+- [[Filters]]
+- [[Backgorund service and hosted service]]
+- [[Clean Architecture]]
+
+---
+#dotnet #csharp #dependency-injection #ioc #aspnet

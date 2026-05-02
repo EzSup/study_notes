@@ -1,3 +1,5 @@
+# EF Core Additional
+
 ## Ключі
 З цікавого те, що немає необхідності прописувати в моделей явно foreign key колонки, якщо ми пишемо залежності через fluent API. А в конфігурації достатньо буде просто написати `builder.HasOne(x => x.Friend).WithMany()` і все.
 
@@ -28,3 +30,12 @@ dotnet ef dbcontext scaffold "Host=localhost;Port=5432;Database=vtc_shop;Usernam
 ```
 після `dotnet ef dbcontext scaffold`  іде connectionString до БД, після чого ми даємо назву нашої бібліотеки для БД, після чого проперті -o із назвою папки в проекті, у уякій повинні бути розміщені файли із ентітісами.
 ## [[EF loading]]
+
+## Див. також
+- [[SQL Query Optimization]]
+- [[SQL]]
+- [[PostgreSQL Queries]]
+- [[Транзакції]]
+
+---
+#ef-core #orm #dotnet #dal

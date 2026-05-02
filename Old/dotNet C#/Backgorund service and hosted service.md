@@ -1,3 +1,5 @@
+# Background Service and Hosted Service
+
 Background service - це сервіс, який виконується постійно на фоні не блокуючий основний потік програми. Він може бути реалізований через інтерфейс IHostedService чи клас BackgroundService
 #### IHostedService
 The `IHostedService` interface defines two methods:
@@ -127,3 +129,10 @@ public void ConfigureServices(IServiceCollection services)
 ```
 
 Також Quartz дозволяє зберігати заплановані задачі в БД.
+
+## Див. також
+- [[Di .net applications]]
+- [[Middlewares]]
+
+---
+#dotnet #csharp #background-service #hosted-service #aspnet

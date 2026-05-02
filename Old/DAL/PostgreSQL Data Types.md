@@ -1,3 +1,5 @@
+# PostgreSQL Data Types
+
 ## Common data types
 
 | Data Type             | Description                                  | Example                                  |
@@ -107,3 +109,10 @@
 | `TSRANGE`       | Range of timestamps                                     | `'[2025-01-01,2025-02-01)'`         |
 | `DATERANGE`     | Range of dates                                          | `'[2025-01-01,2025-01-31)'`         |
 | `TSTZRANGE`     | Range of timestamps with timezone                       | `'[2025-01-01 00:00+02,2025-02-01)'`|
+
+## Див. також
+- [[PostgreSQL Queries]]
+- [[SQL]]
+
+---
+#postgresql #sql #database #data-types

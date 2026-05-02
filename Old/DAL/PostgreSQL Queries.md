@@ -1,3 +1,5 @@
+# PostgreSQL Queries
+
 ### Create table
 ``` SQL
 CREATE TABLE USERS(
@@ -218,4 +220,13 @@ RETURNING Id, Name, Price;
 To delete table from the database is used query `DROP TABLE `
 To remove records from the tables are used `DELETE FROM` and `TRUNCATE TABLE` queries. The only difference between them is in that `DELETE FROM` allows to delete records by condition, but `TRUCATE` removes all the rows immediately.
 
-У контексті запитів в Postgres варто також звернути увагу на [[Stored Procedures]] та [[Індекси]] та [[Транзакції]] які застосовувались при написанні деяких запитів в цій нотатці
+У контексті запитів в Postgres варто також звернути увагу на [[Stored procedures]] та [[Індекси]] та [[Транзакції]] які застосовувались при написанні деяких запитів в цій нотатці
+
+## Див. також
+- [[PostgreSQL Data Types]]
+- [[SQL]]
+- [[SQL Query Optimization]]
+- [[EF Core additional]]
+
+---
+#postgresql #sql #database #dal

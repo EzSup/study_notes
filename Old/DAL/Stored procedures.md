@@ -1,3 +1,5 @@
+# Stored Procedures
+
 Оголошення процедури:
 POSTGRES:
 ```
@@ -57,3 +59,12 @@ SELECT id, name  FROM Users;
 END;
 ```
 Виклик функції: `SELECT * FROM GetAllUsers2();`
+
+
+## Див. також
+- [[PostgreSQL Queries]]
+- [[SQL]]
+- [[SQL Query Optimization]]
+
+---
+#sql #postgresql #stored-procedures #dal
