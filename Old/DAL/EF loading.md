@@ -1,3 +1,8 @@
+---
+tags: [ef-core, orm, dotnet, dal]
+aliases: [EF Loading, Entity Framework Loading]
+---
+
 # EF Loading
 
 В Entity Framework є 3 основні підходи для завантаження пов'язаних даних: eager loading, lazy loading, explicit loading.
@@ -44,6 +49,3 @@ context.Entry(blog).Reference(b => b.Author).Load();
 ## Див. також
 - [[EF Core additional]]
 - [[SQL Query Optimization]]
-
----
-#ef-core #orm #dotnet #dal

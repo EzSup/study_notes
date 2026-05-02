@@ -1,3 +1,8 @@
+---
+tags: [sql, optimization, performance, database, dal]
+aliases: [SQL Query Optimization]
+---
+
 # SQL Query Optimization
 
 ## Способи оптимізації запитів до БД через Entity Framework ([[EF Core additional]])
@@ -22,6 +27,3 @@
 - [[PostgreSQL Queries]]
 - [[Не кластеризований індекс]]
 - [[EF loading]]
-
----
-#sql #optimization #performance #database #dal

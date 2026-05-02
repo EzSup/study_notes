@@ -1,3 +1,8 @@
+---
+tags: [dotnet, csharp, background-service, hosted-service, aspnet]
+aliases: [Background Service, Hosted Service]
+---
+
 # Background Service and Hosted Service
 
 Background service - це сервіс, який виконується постійно на фоні не блокуючий основний потік програми. Він може бути реалізований через інтерфейс IHostedService чи клас BackgroundService
@@ -133,6 +138,3 @@ public void ConfigureServices(IServiceCollection services)
 ## Див. також
 - [[Di .net applications]]
 - [[Middlewares]]
-
----
-#dotnet #csharp #background-service #hosted-service #aspnet

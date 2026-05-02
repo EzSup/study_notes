@@ -1,3 +1,8 @@
+---
+tags: [dotnet, csharp, memory, garbage-collection, clr]
+aliases: [Stack Heap GC, Garbage Collection]
+---
+
 # Stack, Heap, GC
 
 Stack - область пам'яті проекту, що працює за принципом LIFO. Займає 4 МБ в 64-біт системах.
@@ -128,6 +133,3 @@ Garbage Collection можна викликати вручну, для цього
 ## Див. також
 - [[CLR]]
 - [[Streams]]
-
----
-#dotnet #csharp #memory #garbage-collection #clr

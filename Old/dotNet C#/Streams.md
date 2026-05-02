@@ -1,10 +1,26 @@
+---
+tags: [dotnet, csharp, streams, io]
+aliases: [Streams]
+---
+
 # Streams
 
 >Stream is the abstract base class of all streams. A stream is an abstraction of a sequence of bytes, such as a file, an input/output device, an inter-process communication pipe, or a TCP/IP socket. The Stream class and its derived classes provide a generic view of these different types of input and output, and isolate the programmer from the specific details of the operating system and the underlying devices.
 
-**Stream**(стрім або потік) це просто рівень абстракції, який дає можливість чиатти/записувати потоки байтів з/e файл, різні девайси, черхи та TCP/IP сокети 
+**Stream**(стрім або потік) це просто рівень абстракції, який дає можливість чиатти/записувати потоки байтів з/e файл, різні девайси, черхи та TCP/IP сокети.
 
-![[Pasted image 20250209203706.png]]
+```
+              Stream (abstract)
+              ├─ FileStream
+              ├─ MemoryStream
+              ├─ NetworkStream
+              ├─ BufferedStream
+              └─ CryptoStream
+
+  Source ──[chunk]──[chunk]──[chunk]──► Destination
+            (буфер обробляє по частинах)
+```
+
 ## Stream methods
 1. CanRead() - чи читабельний стрім;
 2. CanWrite() - чи писабельний стрім;
@@ -71,10 +87,8 @@ Console.WriteLine($"Average: {result.Average(x => x.TotalMilliseconds)}ms");
 Byte Array - 557.25 ms  
 Stream - 91.22 ms
 ```
-Використовувана пам'ять варіанту з byte[]: 
-![[Pasted image 20250209205524.png]]
-Використана пам'ять варіанту зі Stream:
-![[Pasted image 20250209205651.png]]
+Використовувана пам'ять варіанту з byte[] — **~500 MB** (весь файл завантажується в пам'ять одразу).
+Використана пам'ять варіанту зі Stream — **~0.5 MB** (лише буфер поточного чанку).
 Стріми зберігають в буфер тільки ту частину даних, яку в момент пересилають, і одразу його віддають, записують наступну частину і так далі. Тому ми і спостерігаємо таку значну оптимізацію пам'яті при переході на стріми.
 ## So _prefer_ streams when:
 - you do not need to work with entire stream content;
@@ -120,6 +134,3 @@ Both **StreamReader** and **StreamWriter** are **disposable** resources.
 ## Див. також
 - [[Stack, heap, GC]]
 - [[CLR]]
-
----
-#dotnet #csharp #streams #io

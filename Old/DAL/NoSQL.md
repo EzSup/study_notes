@@ -1,3 +1,8 @@
+---
+tags: [nosql, database, dal]
+aliases: [NoSQL]
+---
+
 # NoSQL
 
 NoSQL БД - це бази даних, які не дотримуються артхітектури таблицю із купою зв'язків, зовнішніх і внутрішніх ключів. 
@@ -105,6 +110,3 @@ NoSQL бази даних охоплюють різноманітні модел
 - [[SQL]]
 - [[Індекси]]
 - [[Microservice Architecture]]
-
----
-#nosql #database #dal

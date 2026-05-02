@@ -1,3 +1,8 @@
+---
+tags: [sql, postgresql, stored-procedures, dal]
+aliases: [Stored Procedures]
+---
+
 # Stored Procedures
 
 Оголошення процедури:
@@ -65,6 +70,3 @@ END;
 - [[PostgreSQL Queries]]
 - [[SQL]]
 - [[SQL Query Optimization]]
-
----
-#sql #postgresql #stored-procedures #dal

@@ -1,3 +1,8 @@
+---
+tags: [architecture, monolith]
+aliases: [Monolithic Architecture, Monolith]
+---
+
 # Monolithic Architecture
 
 One of the earliest and most basic architectural forms is monolithic architecture. The system is intended to function as a single, self-contained unit in a monolithic application. Each component, including the data access layer, business logic, and user interface, is closely integrated into a single codebase.
@@ -11,6 +16,3 @@ Monolithic designs work well in smaller applications where performance and ease 
 ## Див. також
 - [[Microservice Architecture]]
 - [[Clean Architecture]]
-
----
-#architecture #monolith

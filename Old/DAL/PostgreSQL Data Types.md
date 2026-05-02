@@ -1,3 +1,8 @@
+---
+tags: [postgresql, sql, database, data-types]
+aliases: [PostgreSQL Data Types, Postgres Data Types]
+---
+
 # PostgreSQL Data Types
 
 ## Common data types
@@ -113,6 +118,3 @@
 ## Див. також
 - [[PostgreSQL Queries]]
 - [[SQL]]
-
----
-#postgresql #sql #database #data-types

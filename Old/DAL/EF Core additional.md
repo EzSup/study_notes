@@ -1,3 +1,8 @@
+---
+tags: [ef-core, orm, dotnet, dal]
+aliases: [EF Core, Entity Framework]
+---
+
 # EF Core Additional
 
 ## Ключі
@@ -17,7 +22,8 @@ dotnet ef migrations script -o script.sql
 Зміни які ORM побачила але ще не зафіксувала в бд можна прочитати через 
 `_dbContext.ChangeTracker.Entries();` який повертає масив об'єктів EntityEntry.
 
-![[Pasted image 20241228013511.png]]
+Кожен EntityEntry має стан: `Added`, `Modified`, `Deleted`, `Unchanged`, `Detached`.
+
 ## Find and First difference
 Різниця в тому, що якщо ми будемо більше 1-го разу шукати об'єкт через First, то будуть просто N запитів до бд, а якщо через Find, то запит буде 1. При пошуку через Find об'єкт зберігається у локальній пам'яті контексту даних EF, і наступні запити будуть шукати спочатку в цій локальній пам'яті.
 
@@ -36,6 +42,3 @@ dotnet ef dbcontext scaffold "Host=localhost;Port=5432;Database=vtc_shop;Usernam
 - [[SQL]]
 - [[PostgreSQL Queries]]
 - [[Транзакції]]
-
----
-#ef-core #orm #dotnet #dal

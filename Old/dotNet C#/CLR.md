@@ -1,3 +1,8 @@
+---
+tags: [dotnet, csharp, clr, runtime]
+aliases: [CLR, Common Language Runtime]
+---
+
 # CLR (Common Language Runtime)
 
 **CLR (Common language runtime)** - віртуальна машина, на якій виконуються всі мови платформи .Net. А саме вона виконує IL-код через JIT-компілятор, який є частиною CLR.
@@ -48,6 +53,3 @@ CLI включає в себе:
 ## Див. також
 - [[Attributes]]
 - [[Di .net applications]]
-
----
-#dotnet #csharp #clr #runtime

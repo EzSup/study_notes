@@ -1,3 +1,8 @@
+---
+tags: [docker, devops, containers, microservices]
+aliases: [Docker]
+---
+
 # Docker
 
 Docker image (імейдж/образ) - це "шаблон" для контейнера, який містить усі необхідні дані і інструкції для успішного запуску і коректної роботи додатку в контейнері.
@@ -40,6 +45,3 @@ docker run -d -p 6379:6379
 - [[Microservice Architecture]]
 - [[gRPC]]
 - [[RabbitMQ]]
-
----
-#docker #devops #containers #microservices

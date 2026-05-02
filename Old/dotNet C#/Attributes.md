@@ -1,3 +1,8 @@
+---
+tags: [dotnet, csharp, attributes, reflection]
+aliases: [Attributes]
+---
+
 # Attributes
 
 Атрибути - це класи, які можна встановити як додаткові умови для інших різних об'єктів. 
@@ -50,6 +55,3 @@ public class Example
 ## Див. також
 - [[Filters]]
 - [[CLR]]
-
----
-#dotnet #csharp #attributes #reflection

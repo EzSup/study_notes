@@ -1,3 +1,8 @@
+---
+tags: [sql, database, dal]
+aliases: [SQL]
+---
+
 # SQL
 
 Users
@@ -80,6 +85,3 @@ b-tree індекс
 - [[SQL Query Optimization]]
 - [[NoSQL]]
 - [[EF Core additional]]
-
----
-#sql #database #dal

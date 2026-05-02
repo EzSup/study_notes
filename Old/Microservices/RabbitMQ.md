@@ -1,3 +1,8 @@
+---
+tags: [rabbitmq, message-broker, microservices, async]
+aliases: [RabbitMQ]
+---
+
 # RabbitMQ
 
 **RabbitMQ** - це брокер повідомлень. Його основна мета - приймати і віддавати повідомлення. Його можна уявляти собі, як поштове відділення: коли Ви кидаєте лист у скриньку, Ви можете бути впевнені, що рано чи пізно листоноша доставить його адресату. У цій аналогії RabbitMQ є одночасно і поштовою скринькою, і поштовим відділенням, і листоношею.
@@ -122,6 +127,3 @@ class Program
 - [[gRPC]]
 - [[Microservice Architecture]]
 - [[Docker]]
-
----
-#rabbitmq #message-broker #microservices #async

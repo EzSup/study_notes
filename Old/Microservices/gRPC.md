@@ -1,3 +1,8 @@
+---
+tags: [grpc, microservices, http2, api]
+aliases: [gRPC]
+---
+
 # gRPC
 
 gRPC (Google Remote Procedure Call) - фреймворк, побудований поверх HTTP/2.0, який використовує протобаф для опису сервісів.
@@ -6,16 +11,19 @@ gRPC (Google Remote Procedure Call) - фреймворк, побудований
 2. Client to server streaming
 3. Bi-directional streaming
 4. Unary RPC (фактично як звичайний RESTful API)
-![[Pasted image 20241228151300.png]]
+
+```
+  Unary:          Client ──req──► Server ──res──► Client
+  Server stream:  Client ──req──► Server ══res══► Client (багато пакетів)
+  Client stream:  Client ══req══► Server ──res──► Client
+  Bi-directional: Client ══req══► Server ══res══► Client
+```
+
 Формати серіалізації в gRPC:
 1. [[Protobuff]]
 2. JSON
-
 
 ## Див. також
 - [[RabbitMQ]]
 - [[Microservice Architecture]]
 - [[Docker]]
-
----
-#grpc #microservices #http2 #api

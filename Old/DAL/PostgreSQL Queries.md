@@ -1,3 +1,8 @@
+---
+tags: [postgresql, sql, database, dal]
+aliases: [PostgreSQL Queries, Postgres Queries]
+---
+
 # PostgreSQL Queries
 
 ### Create table
@@ -227,6 +232,3 @@ To remove records from the tables are used `DELETE FROM` and `TRUNCATE TABLE` qu
 - [[SQL]]
 - [[SQL Query Optimization]]
 - [[EF Core additional]]
-
----
-#postgresql #sql #database #dal

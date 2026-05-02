@@ -1,3 +1,8 @@
+---
+tags: [architecture, microservices, distributed-systems]
+aliases: [Microservice Architecture, Microservices]
+---
+
 # Microservice Architecture
 
 Мікросервісна архітектура — це підхід до проєктування, при якому додаток складається з набору невеликих, незалежних сервісів, кожен з яких відповідає за окрему частину бізнес-логіки.
@@ -26,6 +31,3 @@
 - [[gRPC]]
 - [[RabbitMQ]]
 - [[Docker]]
-
----
-#architecture #microservices #distributed-systems

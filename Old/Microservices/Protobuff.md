@@ -1,3 +1,8 @@
+---
+tags: [protobuf, serialization, grpc, microservices]
+aliases: [Protobuff, Protocol Buffers]
+---
+
 # Protobuff
 
 Protobuff(Protocol buffers) - формат серіалізації даних, запропонований Google на заміну XML. Використовується для визначення схем в мікросервісах, при роботі із протоколом gRPC.
@@ -27,6 +32,3 @@ message GetUserResponse {
 ## Див. також
 - [[gRPC]]
 - [[Microservice Architecture]]
-
----
-#protobuf #serialization #grpc #microservices

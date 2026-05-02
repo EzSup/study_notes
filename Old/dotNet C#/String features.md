@@ -1,3 +1,8 @@
+---
+tags: [dotnet, csharp, strings, formatting]
+aliases: [String Features]
+---
+
 # String Features
 
 
@@ -91,6 +96,3 @@ csharp
 
 ## Див. також
 - [[CLR]]
-
----
-#dotnet #csharp #strings #formatting

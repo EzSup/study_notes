@@ -1,3 +1,8 @@
+---
+tags: [dotnet, csharp, aspnet, filters, pipeline]
+aliases: [Filters]
+---
+
 # Filters
 
 Фільтри – це компоненти, які дозволяють виконувати код _до або після_ певних етапів виконання дії (action) в контролері.
@@ -94,6 +99,3 @@ EXECUTEDDDDD /mymy/myaction in 7 ms
 - [[Middlewares]]
 - [[Design patterns]]
 - [[Di .net applications]]
-
----
-#dotnet #csharp #aspnet #filters #pipeline
