@@ -188,6 +188,6 @@ db.inventory.find({}, {
 
 ## Посилання
 
-- [[MongoDB — Queries]]
-- [[MongoDB — Aggregation Pipeline]]
-- [[MongoDB — Documents]]
+- [[MongoDb - Queries]]
+- [[MongoDB - Aggregation Pipeline]]
+- [[MongoDb - Documents]]

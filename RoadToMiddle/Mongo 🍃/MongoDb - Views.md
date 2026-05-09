@@ -171,5 +171,5 @@ db.orders.aggregate([
 ## Посилання
 
 - [[MongoDB]]
-- [[MongoDB — Aggregation Pipeline]]
-- [[MongoDB — Індекси]]
+- [[MongoDB - Aggregation Pipeline]]
+- [[MongoDb - Indexes]]

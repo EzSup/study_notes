@@ -82,6 +82,6 @@ aliases: [MongoDB Documents, BSON]
 ## Посилання
 
 - [[MongoDB]]
-- [[MongoDB — Aggregation Pipeline]]
-- [[MongoDB — Індекси]]
-- [[C# MongoDB Driver]]
+- [[MongoDB - Aggregation Pipeline]]
+- [[MongoDb - Indexes]]
+- [[CSharp MongoDB Driver]]

@@ -87,5 +87,5 @@ db.places.find({
 ## Посилання
 
 - [[NoSQL vs SQL]]
-- [[C# MongoDB Driver]]
+- [[CSharp MongoDB Driver]]
 - [[Aggregation Pipeline]]

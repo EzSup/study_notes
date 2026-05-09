@@ -128,6 +128,6 @@ db.inventory.aggregate([
 
 ## Посилання
 
-- [[MongoDB — Queries]]
-- [[MongoDB — Documents]]
-- [[C# MongoDB Driver]]
+- [[MongoDb - Queries]]
+- [[MongoDb - Documents]]
+- [[CSharp MongoDB Driver]]

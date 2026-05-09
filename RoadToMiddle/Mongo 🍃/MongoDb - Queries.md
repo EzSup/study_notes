@@ -208,7 +208,7 @@ db.users.findOne({ name: "Alice" })
 ## Посилання
 
 - [[MongoDB]]
-- [[MongoDB — Documents]]
-- [[MongoDB — Aggregation Pipeline]]
-- [[MongoDB — Індекси]]
-- [[C# MongoDB Driver]]
+- [[MongoDb - Documents]]
+- [[MongoDB - Aggregation Pipeline]]
+- [[MongoDb - Indexes]]
+- [[CSharp MongoDB Driver]]
