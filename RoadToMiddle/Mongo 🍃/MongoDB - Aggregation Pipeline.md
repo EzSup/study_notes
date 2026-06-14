@@ -92,15 +92,15 @@ db.orders.aggregate([
 
 **Accumulator operators:**
 
-| Operator | Description |
-|---|---|
-| `$sum` | Sum of values, or `$sum: 1` to count |
-| `$avg` | Average |
-| `$min` / `$max` | Min / max value |
-| `$first` / `$last` | First / last document in group |
-| `$push` | Collect values into array |
-| `$addToSet` | Collect unique values into array |
-| `$count` | Count (MongoDB 5.0+) |
+| Operator           | Description                          |
+| ------------------ | ------------------------------------ |
+| `$sum`             | Sum of values, or `$sum: 1` to count |
+| `$avg`             | Average                              |
+| `$min` / `$max`    | Min / max value                      |
+| `$first` / `$last` | First / last document in group       |
+| `$push`            | Collect values into array            |
+| `$addToSet`        | Collect unique values into array     |
+| `$count`           | Count (MongoDB 5.0+)                 |
 
 ---
 

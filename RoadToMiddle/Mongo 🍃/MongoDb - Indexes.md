@@ -126,6 +126,19 @@ db.articles.find(
   { $text: { $search: "mongodb" } },
   { score: { $meta: "textScore" } }
 ).sort({ score: { $meta: "textScore" } })
+
+// для e-commerce/каталогу — типова схема
+db.orders.createIndex({
+  description: "text",   // довгий опис товару
+  title: "text",         // назва
+  tags: "text"           // теги
+})
+
+// з вагами — опис важливіший за теги
+db.orders.createIndex(
+  { title: "text", description: "text", tags: "text" },
+  { weights: { title: 10, description: 5, tags: 1 } }
+)
 ```
 
 ⚠️ На колекцію може бути тільки **один** text індекс. Для серйозного пошуку краще Atlas Search.
