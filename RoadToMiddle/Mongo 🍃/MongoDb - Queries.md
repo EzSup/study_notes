@@ -193,6 +193,196 @@ db.users.findOne({ name: "Alice" })
 
 ---
 
+## Оновлення (Update)
+
+### updateOne / updateMany
+
+Перший аргумент — фільтр (як у `find`), другий — оператор оновлення.
+
+```js
+// оновити одне поле
+db.users.updateOne(
+  { _id: userId },
+  { $set: { city: "Lviv" } }
+)
+
+// оновити кілька документів
+db.users.updateMany(
+  { status: "inactive" },
+  { $set: { archived: true }, $unset: { sessionToken: "" } }
+)
+```
+
+### Оператори оновлення
+
+**Поля:**
+
+| Оператор | Що робить |
+|---|---|
+| `$set` | Встановити значення поля |
+| `$unset` | Видалити поле |
+| `$inc` | Збільшити числове поле на N (від'ємне — зменшити) |
+| `$mul` | Помножити числове поле на N |
+| `$rename` | Перейменувати поле |
+| `$min` | Оновити якщо нове значення менше поточного |
+| `$max` | Оновити якщо нове значення більше поточного |
+| `$currentDate` | Встановити поточну дату |
+
+```js
+db.products.updateOne(
+  { _id: id },
+  {
+    $inc: { stock: -1, soldCount: 1 },
+    $set: { updatedAt: new Date() },
+    $min: { lowestPrice: newPrice }  // оновить тільки якщо newPrice < lowestPrice
+  }
+)
+```
+
+**Масиви:**
+
+| Оператор | Що робить |
+|---|---|
+| `$push` | Додати елемент в кінець масиву |
+| `$pull` | Видалити всі елементи що збігаються з умовою |
+| `$addToSet` | Додати елемент тільки якщо його ще немає (унікальність) |
+| `$pop` | Видалити перший (`-1`) або останній (`1`) елемент |
+| `$each` | Модифікатор — додати кілька елементів через `$push` або `$addToSet` |
+
+```js
+// додати один тег
+db.posts.updateOne({ _id: id }, { $push: { tags: "mongodb" } })
+
+// додати кілька одразу
+db.posts.updateOne({ _id: id }, { $push: { tags: { $each: ["db", "nosql"] } } })
+
+// видалити тег
+db.posts.updateOne({ _id: id }, { $pull: { tags: "outdated" } })
+
+// додати тільки якщо немає
+db.posts.updateOne({ _id: id }, { $addToSet: { tags: "mongodb" } })
+```
+
+**Позиційні оператори:**
+
+```js
+// оновити перший елемент масиву що відповідає фільтру
+db.orders.updateOne(
+  { _id: id, "items.productId": "p1" },
+  { $set: { "items.$.qty": 5 } }   // $ — позиція знайденого елемента
+)
+
+// оновити всі елементи масиву
+db.orders.updateOne({ _id: id }, { $set: { "items.$[].price": 0 } })
+
+// оновити елементи що відповідають умові (arrayFilters)
+db.orders.updateOne(
+  { _id: id },
+  { $set: { "items.$[el].discounted": true } },
+  { arrayFilters: [{ "el.price": { $gt: 100 } }] }
+)
+```
+
+### Upsert — вставити якщо не знайдено
+
+```js
+db.users.updateOne(
+  { email: "alice@example.com" },
+  { $set: { name: "Alice", city: "Kyiv" }, $setOnInsert: { createdAt: new Date() } },
+  { upsert: true }
+)
+// якщо документ знайдено — оновить name і city
+// якщо не знайдено — вставить новий документ + createdAt
+```
+
+`$setOnInsert` — виконується тільки при вставці нового документа, не при оновленні.
+
+### replaceOne — повна заміна документа
+
+```js
+// замінює весь документ (крім _id)
+db.users.replaceOne(
+  { _id: userId },
+  { name: "Alice", city: "Lviv", updatedAt: new Date() }
+)
+// ⚠️ поля яких немає в новому документі — зникають
+```
+
+### findOneAndUpdate — знайти, оновити, повернути
+
+```js
+// повертає документ ДО оновлення (дефолт)
+db.inventory.findOneAndUpdate(
+  { _id: id },
+  { $inc: { stock: -1 } }
+)
+
+// повертає документ ПІСЛЯ оновлення
+db.inventory.findOneAndUpdate(
+  { _id: id },
+  { $inc: { stock: -1 } },
+  { returnDocument: "after" }
+)
+```
+
+Корисно для атомарних операцій "прочитати і змінити" — наприклад, списати залишок товару і одразу отримати нове значення.
+
+---
+
+## Видалення (Delete)
+
+```js
+// видалити один документ
+db.users.deleteOne({ _id: userId })
+
+// видалити всі що відповідають фільтру
+db.users.deleteMany({ status: "inactive" })
+
+// видалити всі документи в колекції (структура залишається)
+db.users.deleteMany({})
+
+// findOneAndDelete — видалити і повернути документ
+const deleted = db.users.findOneAndDelete({ _id: userId })
+```
+
+---
+
+## Підрахунок документів
+
+```js
+// точна кількість за фільтром (читає колекцію)
+db.users.countDocuments({ status: "active" })
+
+// приблизна кількість всіх документів (читає метадані — дуже швидко)
+db.users.estimatedDocumentCount()
+```
+
+> ⚠️ `estimatedDocumentCount()` не підтримує фільтр — тільки для загальної кількості. Для фільтрованого підрахунку — тільки `countDocuments()`.
+
+---
+
+## bulkWrite — пакетні операції
+
+Відправляє кілька різних write операцій одним запитом до сервера:
+
+```js
+db.users.bulkWrite([
+  { insertOne: { document: { name: "Bob", city: "Odesa" } } },
+  { updateOne: { filter: { name: "Alice" }, update: { $set: { city: "Kyiv" } } } },
+  { deleteOne: { filter: { name: "old-user" } } },
+  { replaceOne: { filter: { _id: id }, replacement: { name: "New", status: "active" } } }
+])
+```
+
+За замовчуванням операції виконуються **по порядку** (ordered: true) — зупиняється при першій помилці. Для паралельного виконання:
+
+```js
+db.users.bulkWrite([...], { ordered: false })
+// усі операції виконуються, помилки збираються і повертаються разом
+```
+
+---
+
 ## SQL → MongoDB шпаргалка
 
 | SQL | MongoDB |
@@ -204,6 +394,10 @@ db.users.findOne({ name: "Alice" })
 | `WHERE name LIKE 'A%'` | `{ name: { $regex: "^A" } }` |
 | `WHERE a = 1 AND b = 2` | `{ a: 1, b: 2 }` |
 | `WHERE a = 1 OR b = 2` | `{ $or: [{ a: 1 }, { b: 2 }] }` |
+| `UPDATE ... SET city = 'Lviv' WHERE ...` | `updateOne({ ... }, { $set: { city: "Lviv" } })` |
+| `UPDATE ... SET count = count + 1` | `updateOne({ ... }, { $inc: { count: 1 } })` |
+| `DELETE FROM users WHERE ...` | `deleteOne({ ... })` |
+| `SELECT COUNT(*) WHERE ...` | `countDocuments({ ... })` |
 
 ## Посилання
 

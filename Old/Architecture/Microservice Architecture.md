@@ -15,7 +15,7 @@ aliases: [Microservice Architecture, Microservices]
 
 ## Комунікація між сервісами
 - **Синхронна:** REST API, [[gRPC]] (з використанням [[Protobuff]])
-- **Асинхронна:** [[RabbitMQ]], Kafka та інші брокери повідомлень
+- **Асинхронна:** [[study_notes/Old/Microservices/RabbitMQ]], Kafka та інші брокери повідомлень
 
 ## Інфраструктура
 - Контейнеризація через [[Docker]]
@@ -29,5 +29,5 @@ aliases: [Microservice Architecture, Microservices]
 - [[Monolithic Architecture]]
 - [[Clean Architecture]]
 - [[gRPC]]
-- [[RabbitMQ]]
+- [[study_notes/Old/Microservices/RabbitMQ]]
 - [[Docker]]

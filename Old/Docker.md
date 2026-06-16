@@ -44,4 +44,4 @@ docker run -d -p 6379:6379
 ## Див. також
 - [[Microservice Architecture]]
 - [[gRPC]]
-- [[RabbitMQ]]
+- [[study_notes/Old/Microservices/RabbitMQ]]

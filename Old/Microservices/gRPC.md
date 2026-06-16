@@ -24,6 +24,6 @@ gRPC (Google Remote Procedure Call) - фреймворк, побудований
 2. JSON
 
 ## Див. також
-- [[RabbitMQ]]
+- [[study_notes/Old/Microservices/RabbitMQ]]
 - [[Microservice Architecture]]
 - [[Docker]]
